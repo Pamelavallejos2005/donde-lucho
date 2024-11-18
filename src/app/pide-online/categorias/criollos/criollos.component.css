@@ -1,0 +1,104 @@
+/* Sección del Menú */
+.menu-section {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Dos columnas por defecto */
+  gap: 30px; /* Espacio entre tarjetas */
+  padding: 30px;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff; /* Fondo blanco */
+  border: 0px solid #ddd; /* Borde suave */
+  border-radius: 8px;
+  padding: 20px;
+  gap: 20px; /* Espaciado entre texto e imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.03); /* Efecto de hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.menu-text {
+  flex: 1;
+  font-family: 'Roboto', sans-serif;
+}
+
+.menu-text h3 {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #642424;
+  margin-bottom: 8px;
+}
+
+.menu-text span {
+  font-size: 0.9rem;
+  color: #c5bdbd;
+  font-weight: 400;
+}
+
+.menu-text p {
+  font-size: 0.9rem;
+  color: #333;
+  font-weight: 400;
+}
+
+.menu-item img {
+  width: 196px;
+  height: 171px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: linear-gradient(0deg, rgba(100, 36, 36, 0.08) 0%, rgba(100, 36, 36, 0.08) 100%);
+}
+
+/* Media Queries para tablets y celulares */
+@media (max-width: 768px) {
+  .menu-section {
+    grid-template-columns: repeat(1, 1fr); /* Una columna en tablets */
+    gap: 20px; /* Reducir espacio entre tarjetas */
+    padding: 20px; /* Reducir padding */
+  }
+
+  .menu-item {
+    flex-direction: column; /* Cambiar la dirección a vertical */
+    text-align: center; /* Centrar contenido */
+    padding: 15px;
+    gap: 15px; /* Reducir espacio entre texto e imagen */
+  }
+
+  .menu-item img {
+    width: 100%; /* Imagen ocupa el ancho completo */
+    height: auto; /* Altura automática */
+  }
+
+  .menu-text h3 {
+    font-size: 1rem; /* Reducir tamaño de título */
+  }
+
+  .menu-text span, .menu-text p {
+    font-size: 0.8rem; /* Reducir texto descriptivo */
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-section {
+    padding: 15px; /* Reducir aún más el padding en celulares */
+  }
+
+  .menu-item {
+    padding: 10px; /* Reducir padding de los elementos */
+    gap: 10px; /* Reducir espacio entre contenido */
+  }
+
+  .menu-text h3 {
+    font-size: 0.9rem; /* Texto más compacto */
+  }
+
+  .menu-text span, .menu-text p {
+    font-size: 0.7rem; /* Texto descriptivo más pequeño */
+  }
+}

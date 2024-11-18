@@ -1,0 +1,24 @@
+<div class="header-section">
+  <img src="pideonline1.png" alt="Fondo Donde Lucho" class="background-image">
+  <div class="header-content">
+    <p>Haz tu pedido ahora y</p>
+    <p>disfruta del sabor de Donde Lucho</p>
+  </div>
+</div>
+
+<div class="categories-section">
+  <nav class="categories-nav">
+    <a routerLink="tipicos" routerLinkActive="activebutton" class="button">Típicos</a>
+    <a routerLink="marinos" routerLinkActive="activebutton" class="button">Marinos</a>
+    <a routerLink="criollos" routerLinkActive="activebutton" class="button">Criollos</a>
+    <a routerLink="brasas" routerLinkActive="activebutton" class="button">Brasas</a>
+    <a routerLink="postres" routerLinkActive="activebutton" class="button">Postres</a>
+    <a routerLink="complementos" routerLinkActive="activebutton" class="button">Complementos</a>
+    <a routerLink="bebidas" routerLinkActive="activebutton" class="button">Bebidas</a>
+  </nav>
+</div>
+
+<div class="menu-section">
+  <!-- Aquí se cargará dinámicamente el contenido de las categorías -->
+  <router-outlet></router-outlet>
+</div>

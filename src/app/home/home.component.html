@@ -1,0 +1,79 @@
+<!-- Sección de Promociones con Navegación -->
+<section class="promo-section" (mouseenter)="showNextImage()">
+    <button class="promo-nav prev" (click)="showPrevImage()">&#9664;</button>
+    <button class="promo-nav next" (click)="showNextImage()">&#9654;</button>
+    <img src="promocion5.jpg" alt="Promoción 5" class="promo-img" [class.active]="currentIndex === 3">
+    <img src="promocion11.jpg" alt="Promoción 1" class="promo-img" [class.active]="currentIndex === 0">
+    <img src="promocion22.jpg" alt="Promoción 2" class="promo-img" [class.active]="currentIndex === 1">
+    <img src="promocion33.jpg" alt="Promoción 3" class="promo-img" [class.active]="currentIndex === 2">
+</section>
+<!-- Título de Categorías -->
+<div class="categories-title">
+  <h2>CATEGORÍAS</h2>
+</div>
+
+<!-- Contenedor de Categorías -->
+<div class="categories-container">
+  <div class="category">
+      <img src="tipicos.png" alt="Típicos">
+      <button (click)="iraTipicos()" class="category-button">
+        <p>TÍPICOS</p>
+      </button>
+  </div>
+  
+  <div class="category">
+      <img src="marinos.png" alt="Marinos">
+      <button (click)="iraMarinos()" class="category-button">
+        <p>MARINOS</p>
+      </button>
+  </div>
+  
+  <div class="category">
+      <img src="criollos.png" alt="Criollos">
+      <button (click)="iraCriollos()" class="category-button">
+        <p>CRIOLLOS</p>
+      </button>
+  </div>
+  
+  <div class="category">
+      <img src="brasas.png" alt="Brasas">
+      <button (click)="iraBrasas()" class="category-button">
+        <p>BRASAS</p>
+      </button>
+  </div>
+  
+  <div class="category">
+      <img src="postres.png" alt="Postres">
+      <button (click)="iraPostres()" class="category-button">
+        <p>POSTRES</p>
+      </button>
+  </div>
+  
+  <div class="category">
+      <img src="complementos.png" alt="Complementos">
+      <button (click)="iraComplementos()" class="category-button">
+        <p>COMPLEMENTOS</p>
+      </button>
+  </div>
+  
+  <div class="category">
+      <img src="bebidas.png" alt="Bebidas">
+      <button (click)="iraBebidas()" class="category-button">
+        <p>BEBIDAS</p>
+      </button>
+  </div>
+</div>
+
+
+
+<!-- Sección de Nuestra Historia -->
+<div class="history-section">
+    <div class="history-text">
+        <h2>Nuestra Historia</h2>
+        <p>Donde Lucho abrió sus puertas el 1 de febrero de 2020 en Lurigancho Chosica, ofreciendo una auténtica experiencia de cocina peruana. Nos dedicamos a ofrecer una experiencia culinaria excepcional, resaltando lo mejor de la cocina peruana con una cuidada selección de platos a las brasas, criollos, marinos y típicos.</p>
+        <p>Cada plato es una muestra de nuestra pasión por la tradición y el sabor auténtico, preparado con generosidad y dedicación para que cada cliente disfrute de una experiencia memorable. Visítanos y déjate llevar por el sabor y la calidad que nos caracteriza, o realiza tu pedido por delivery para disfrutar de Donde Lucho desde la comodidad de tu hogar.</p>
+    </div>
+    <div class="history-image">
+        <img src="historia.jpg" >
+    </div>
+</div>

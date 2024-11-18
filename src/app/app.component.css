@@ -1,0 +1,238 @@
+/* Reiniciar márgenes y padding del body para evitar espacios */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales de la barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #642424;
+  padding: 10px 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  height: 80px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Logo en la barra de navegación */
+.logo img {
+  height: 50px;
+  width: auto;
+}
+
+/* Alineación y estilo de los enlaces de navegación */
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover en los enlaces */
+.nav-links a:hover {
+  background-color: #d4af37;
+  color: #642424;
+  transform: scale(1.05);
+}
+
+/* Estilo para el enlace activo */
+.nav-links a.active, .nav-links a.active-link {
+  background-color: #FFD700; /* Color amarillo sólido */
+  color: #5C0A0A;
+  border-radius: 5px;
+}
+
+/* Margen superior en el contenido para evitar que quede cubierto por la barra de navegación */
+router-outlet {
+  display: block;
+  margin-top: 100px; /* Ajuste del margen superior para el contenido debajo de la cabecera */
+}
+
+/* Promo Section */
+.promo-section {
+  position: relative;
+  text-align: center;
+  padding: 150px 20px;
+  background-image: url("/piepagina.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.promo-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #252B42;
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.promo-section h2,
+.promo-section p,
+.app-buttons {
+  position: relative;
+  z-index: 2;
+}
+
+.promo-section h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.promo-section p {
+  font-size: 20px;
+  margin: 10px 0 20px;
+}
+
+/* App Buttons */
+.app-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.app-buttons .playstore,
+.app-buttons .appstore {
+  padding: 12px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.app-buttons .playstore {
+  color: #642424;
+  background-color: #c79a00;
+}
+
+.app-buttons .appstore {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+
+.app-buttons button:hover {
+  transform: scale(1.05);
+}
+
+/* Footer Section */
+.footer-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 100px;
+  background-color: #642424;
+  color: white;
+}
+
+.footer-logo-container img {
+  height: 40px;
+  width: auto;
+}
+
+.social-media {
+  display: flex;
+  gap: 20px;
+}
+
+.social-media a img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-text {
+  font-size: 14px;
+  text-align: right;
+  max-width: 300px;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+  .navbar {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+  }
+
+  .nav-links {
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+  }
+
+  .promo-section {
+      padding: 100px 10px;
+  }
+
+  .promo-section h2 {
+      font-size: 32px;
+  }
+
+  .promo-section p {
+      font-size: 16px;
+  }
+
+  .app-buttons .playstore, .app-buttons .appstore {
+      padding: 10px 20px;
+      font-size: 16px;
+  }
+
+  .footer-section {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px 20px;
+  }
+
+  .footer-text {
+      max-width: 100%;
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .promo-section h2 {
+      font-size: 28px;
+  }
+
+  .promo-section p {
+      font-size: 14px;
+  }
+
+  .app-buttons {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .app-buttons .playstore, .app-buttons .appstore {
+      width: 100%;
+      text-align: center;
+  }
+}

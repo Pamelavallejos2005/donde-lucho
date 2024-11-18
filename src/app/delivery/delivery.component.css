@@ -1,0 +1,10 @@
+/* Map Section */
+.map-section h2 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  color: #642424;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.4;
+}
